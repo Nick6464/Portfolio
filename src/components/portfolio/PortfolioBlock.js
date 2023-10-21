@@ -30,8 +30,11 @@ function PortfolioBlock(props) {
                   variant="contained"
                   href={live}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ backgroundColor: '#27242f', color: 'white' }}
+                  style={{
+                    backgroundColor: '#1D1B23',
+                    color: 'white',
+                    fontFamily: 'Courier New, Courier, monospace',
+                  }}
                 >
                   Live Demo
                 </Button>
@@ -45,8 +48,11 @@ function PortfolioBlock(props) {
                 variant="contained"
                 href={source}
                 target="_blank"
-                rel="noopener noreferrer"
-                style={{ backgroundColor: '#27242f', color: 'white' }}
+                style={{
+                  backgroundColor: '#1D1B23',
+                  color: 'white',
+                  fontFamily: 'Courier New, Courier, monospace',
+                }}
               >
                 Source Code
               </Button>
