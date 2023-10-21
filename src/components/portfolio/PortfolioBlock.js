@@ -1,24 +1,61 @@
 import React from 'react';
-import IconLink from "./IconLink";
-import {Box} from "@mui/material";
+import { Box, Button, Grid } from '@mui/material';
+import Terminal from '../about/Terminal';
+import { Code, OpenInNew } from '@mui/icons-material';
 
 function PortfolioBlock(props) {
-   const {image, live, source, title} = props;
-   return (
-      <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-         <Box component={'img'} src={image} alt={'mockup'}/>
-         <h1 style={{fontSize: '2rem'}}>{title}</h1>
-         <Box className={'portfolio'} display={'flex'} flexDirection={'column'} gap={'0.5rem'}
-              alignItems={'center'} fontSize={'1.5rem'} py={'2rem'}>
-            {live && <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
-               <IconLink link={live} title={'Live Demo'} icon={'fa fa-safari'}/>
-            </Box>}
-            <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
-               <IconLink link={source} title={'Source Code'} icon={'fa fa-code'}/>
-            </Box>
-         </Box>
+  const { image, live, source, title } = props;
+  return (
+    <Terminal>
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Box
+          width={'100%'}
+          height={'100%'}
+          component={'img'}
+          src={image}
+          alt={'mockup'}
+        />
+        <h1 style={{ fontSize: '2rem' }}>{title}</h1>
+        <Grid container justifyContent={'center'} className={'portfolio'}>
+          {live && (
+            <Grid item xs={6}>
+              <Grid container justifyContent={'center'}>
+                <Button
+                  startIcon={<OpenInNew />}
+                  variant="contained"
+                  href={live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ backgroundColor: '#27242f', color: 'white' }}
+                >
+                  Live Demo
+                </Button>
+              </Grid>
+            </Grid>
+          )}
+          <Grid item xs={6}>
+            <Grid container justifyContent={'center'}>
+              <Button
+                startIcon={<Code />}
+                variant="contained"
+                href={source}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ backgroundColor: '#27242f', color: 'white' }}
+              >
+                Source Code
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
       </Box>
-   );
+    </Terminal>
+  );
 }
 
 export default PortfolioBlock;
