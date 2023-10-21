@@ -18,10 +18,6 @@ export const info = {
     baseColor: colors[0],
     miniBio: [
         {
-            emoji: '☕',
-            text: 'fueled by coffee'
-        },
-        {
             emoji: '🌎',
             text: 'based in the Wellington, NZ'
         },
@@ -82,34 +78,10 @@ export const info = {
     ],
     portfolio: [ 
         {
-            title: "Project 1",
-            live: "https://paytonpierce.dev", 
-            source: "https://github.com/paytonjewell", 
+            title: "GaragePi",
+            live: "https://www.garagepi.site", 
+            source: "https://github.com/Nick6464/garagepi-frontend", 
             image: mock1
         },
-        {
-            title: "Project 2",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock2
-        },
-        {
-            title: "Project 3",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock3
-        },
-        {
-            title: "Project 4",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock4
-        },
-        {
-            title: "Project 5",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock5
-        }
     ]
 }
