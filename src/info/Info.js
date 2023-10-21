@@ -83,5 +83,10 @@ export const info = {
             source: "https://github.com/Nick6464/garagepi-frontend", 
             image: mock1
         },
+        {
+            title: "Minecraft Hardcore Tracker",
+            source: "https://github.com/Nick6464/Nicks-Hardcore",
+            image: mock2
+        }
     ]
 }
