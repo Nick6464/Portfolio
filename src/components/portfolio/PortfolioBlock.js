@@ -16,6 +16,8 @@ function PortfolioBlock(props) {
         <Box
           width={'100%'}
           height={'100%'}
+          maxWidth={'500px'}
+          maxHeight={'500px'}
           component={'img'}
           src={image}
           alt={'mockup'}

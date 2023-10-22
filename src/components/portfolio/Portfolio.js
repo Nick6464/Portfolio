@@ -16,7 +16,14 @@ export default function Portfolio() {
     //         ))}
     //     </Grid>
     // </Box>
-    <Box sx={{ margin: 1 }}>
+    <Box
+      sx={{
+        margin: 2,
+        maxWidth: 1920,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      }}
+    >
       <Grid container display={'flex'} justifyContent={'center'} spacing={2}>
         {info.portfolio.map((project, index) => (
           <Grid item xs={12} md={6} key={index}>
