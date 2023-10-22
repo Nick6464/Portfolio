@@ -10,23 +10,23 @@ const links = [
   {
     name: 'Home',
     to: '/',
-    active: 'home',
+    active: 'Home',
   },
   {
     name: 'About Me',
     to: '/about',
-    active: 'about',
+    active: 'About',
   },
   {
     name: logo,
     type: 'logo',
     to: '/',
-    active: 'home',
+    active: 'Home',
   },
   {
     name: 'Portfolio',
     to: '/portfolio',
-    active: 'portfolio',
+    active: 'Portfolio',
   },
 ];
 
