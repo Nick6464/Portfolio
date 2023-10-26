@@ -2,6 +2,7 @@ import self from '../img/self.png';
 import mock1 from '../img/mock1.png';
 import mock2 from '../img/mock2.png';
 import mock3 from '../img/mock3.png';
+import cv from '../img/cv.pdf';
 
 export let colors = ['rgb(0,255,164)', 'rgb(166,104,255)'];
 
@@ -38,8 +39,9 @@ export const info = {
       icon: 'fa fa-linkedin',
       label: 'linkedin',
     },
+    //Make the cv link open the cv in a new tab
     {
-      link: 'https://www.waltonit.dev/cv.pdf',
+      link: cv,
       icon: 'fa fa-file',
       label: 'cv',
     },
