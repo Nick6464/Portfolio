@@ -10,14 +10,14 @@ export const info = {
   firstName: 'Nick',
   lastName: 'Walton',
   initials: 'NW',
-  position: 'a Full Stack Developer',
+  position: 'a Full Stack Engineer',
   selfPortrait: self,
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
   miniBio: [
     {
       emoji: '🌎',
-      text: 'based in the Wellington, NZ',
+      text: 'Based in the Wellington, NZ',
     },
     {
       emoji: '💼',
