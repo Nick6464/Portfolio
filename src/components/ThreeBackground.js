@@ -1,4 +1,3 @@
-import { Stats, OrbitControls } from '@react-three/drei';
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MeshBasicMaterial, SphereGeometry } from 'three';
@@ -59,11 +58,7 @@ export default function App() {
         }}
         style={{ pointerEvents: 'none' }}
       >
-        <directionalLight
-          intensity={0.05}
-          position={[-3.3, -1.0, 4.4]}
-          castShadow
-        />
+        <directionalLight intensity={1.5} position={[-3.3, -1.0, 4.4]} castShadow />
         <Model />
         <Stars />
       </Canvas>
