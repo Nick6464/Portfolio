@@ -6,6 +6,7 @@ import About from './about/About';
 import Portfolio from './portfolio/Portfolio';
 import { Route, Routes } from 'react-router-dom';
 import { Box, Grid } from '@mui/material';
+import ThreeBackground from './ThreeBackground';
 
 export default function BaseLayout() {
   let [darkMode, setDarkMode] = useState(true);
@@ -35,6 +36,7 @@ export default function BaseLayout() {
         flexDirection={'column'}
         minHeight={'100vh'}
         justifyContent={'space-between'}
+        style={{ position: 'relative', zIndex: 2 }}
       >
         <Grid item>
           <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} />
@@ -47,6 +49,7 @@ export default function BaseLayout() {
           </Routes>
         </Grid>
       </Grid>
+      <ThreeBackground />
     </Box>
   );
 }
