@@ -1,12 +1,16 @@
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { MeshBasicMaterial, SphereGeometry } from 'three';
+import { MeshBasicMaterial, SphereGeometry, Clock } from 'three';
 
 function Model() {
   const gltf = useLoader(GLTFLoader, '/scene.gltf');
   const scale = window.innerHeight / 400;
+  const clock = new Clock();
 
-  useFrame((state, delta) => (gltf.scene.rotation.y -= delta / 5));
+  useFrame(() => {
+    const elapsedTime = clock.getElapsedTime();
+    gltf.scene.rotation.y = -elapsedTime / 5;
+  });
 
   return (
     <primitive
@@ -16,7 +20,6 @@ function Model() {
     />
   );
 }
-
 function Stars() {
   let group = [];
   const material = new MeshBasicMaterial({ color: 0xffffff }); // white color
