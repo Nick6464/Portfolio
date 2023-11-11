@@ -60,6 +60,7 @@ export default function Navbar({ darkMode, handleClick }) {
               to={link.to}
               onClick={() => setActive(link.active)}
               className={Style.link}
+              style={{ color: darkMode ? 'white' : 'black' }} // Add this line
             >
               {!link.type && <p style={{ padding: '0.5rem 0' }}>{link.name}</p>}
               {link.type && (

@@ -21,11 +21,10 @@ function Stars() {
   let group = [];
   const material = new MeshBasicMaterial({ color: 0xffffff }); // white color
   const geometry = new SphereGeometry(1, 32, 32); // sphere shape
-
   for (let i = 0; i < 1000; i++) {
-    const [x, y, z] = Array(3)
-      .fill()
-      .map(() => Math.random() * 1600 - 800);
+    const x = Math.random() * window.innerWidth - window.innerWidth / 2;
+    const y = Math.random() * window.innerHeight - window.innerHeight / 2;
+    const z = Math.random() * 1600 - 800;
     group.push(
       <mesh
         key={i}
