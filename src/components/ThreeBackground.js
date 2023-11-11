@@ -20,7 +20,7 @@ function Model() {
 
 function Stars() {
   let group = [];
-  const material = new MeshBasicMaterial({ color: 0xffffff, depthTest: false }); // white color
+  const material = new MeshBasicMaterial({ color: 0xffffff }); // white color
   const geometry = new SphereGeometry(1, 32, 32); // sphere shape
 
   for (let i = 0; i < 1000; i++) {
@@ -29,7 +29,7 @@ function Stars() {
       .map(() => Math.random() * 1600 - 800);
     group.push(
       <mesh
-        position={[x, y, z - 5000]} // place stars further away
+        position={[x, y, z - 10000]} // place stars much further away
         material={material}
         geometry={geometry}
       />
