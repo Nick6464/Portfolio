@@ -28,6 +28,7 @@ function Stars() {
       .map(() => Math.random() * 1600 - 800);
     group.push(
       <mesh
+        key={i}
         position={[x, y, z - 10000]} // place stars much further away
         material={material}
         geometry={geometry}
@@ -58,7 +59,11 @@ export default function App() {
         }}
         style={{ pointerEvents: 'none' }}
       >
-        <directionalLight intensity={1.5} position={[-3.3, -1.0, 4.4]} castShadow />
+        <directionalLight
+          intensity={1.5}
+          position={[-3.3, -1.0, 4.4]}
+          castShadow
+        />
         <Model />
         <Stars />
       </Canvas>
