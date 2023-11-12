@@ -49,36 +49,41 @@ export default function Navbar({ darkMode, handleClick }) {
         textTransform={'lowercase'}
         fontSize={'1rem'}
       >
-        {links.map((link, index) => (
-          <Box
-            key={index}
-            component={'li'}
-            className={link.active === active && !link.type && Style.active}
-            sx={{
-              borderImageSource: info.gradient,
-              ...(link.type && {
-                height: 60,
-                width: 60,
-              }),
-            }}
-          >
-            <Link
-              to={link.to}
-              onClick={() => setActive(link.active)}
-              className={Style.link}
-              style={{ color: darkMode ? 'white' : 'black' }} // Add this line
+        {links.map((link, index) => {
+          if (link.type && window.innerWidth <= 400) return null;
+          return (
+            <Box
+              key={index}
+              component={'li'}
+              className={link.active === active && !link.type && Style.active}
+              sx={{
+                borderImageSource: info.gradient,
+                ...(link.type && {
+                  height: 60,
+                  width: 60,
+                }),
+              }}
             >
-              {!link.type && <p style={{ padding: '0.5rem 0' }}>{link.name}</p>}
-              {link.type && (
-                <img
-                  style={{ height: 60, width: 60 }}
-                  src={link.name}
-                  alt={'logo'}
-                />
-              )}
-            </Link>
-          </Box>
-        ))}
+              <Link
+                to={link.to}
+                onClick={() => setActive(link.active)}
+                className={Style.link}
+                style={{ color: darkMode ? 'white' : 'black' }} // Add this line
+              >
+                {!link.type && (
+                  <p style={{ padding: '0.5rem 0' }}>{link.name}</p>
+                )}
+                {link.type && (
+                  <img
+                    style={{ height: 60, width: 60 }}
+                    src={link.name}
+                    alt={'logo'}
+                  />
+                )}
+              </Link>
+            </Box>
+          );
+        })}
         <li>
           <Toggler darkMode={darkMode} handleClick={handleClick} />
         </li>
