@@ -54,7 +54,13 @@ export default function Navbar({ darkMode, handleClick }) {
             key={index}
             component={'li'}
             className={link.active === active && !link.type && Style.active}
-            sx={{ borderImageSource: info.gradient }}
+            sx={{
+              borderImageSource: info.gradient,
+              ...(link.type && {
+                height: 60,
+                width: 60,
+              }),
+            }}
           >
             <Link
               to={link.to}
