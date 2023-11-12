@@ -40,7 +40,7 @@ function Stars() {
   return group;
 }
 
-export default function App() {
+export default function EarthBackground({darkMode}) {
   return (
     <div
       style={{
@@ -67,7 +67,7 @@ export default function App() {
           castShadow
         />
         <Model />
-        <Stars />
+        {darkMode && <Stars />}
       </Canvas>
     </div>
   );

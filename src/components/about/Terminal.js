@@ -12,7 +12,7 @@ function Terminal(props) {
     <Box
       component={'section'}
       className={classNames(Style.terminal, Style.shadowed)}
-      width={children ? { width: '100%' } : { xs: '80%', md: '50%' }}
+      width={children ? { xs: '95%', md: '100%' } : { xs: '95%', md: '50%' }}
       borderRadius={'0.5rem'}
       mb={!children && '4rem'}
     >

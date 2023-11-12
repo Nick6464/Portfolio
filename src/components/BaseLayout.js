@@ -49,7 +49,7 @@ export default function BaseLayout() {
           </Routes>
         </Grid>
       </Grid>
-      <ThreeBackground />
+      <ThreeBackground darkMode={darkMode} />
     </Box>
   );
 }
