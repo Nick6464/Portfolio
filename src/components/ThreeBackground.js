@@ -1,6 +1,7 @@
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MeshBasicMaterial, SphereGeometry, Clock } from 'three';
+import { useEffect, useState } from 'react';
 
 function Model() {
   const gltf = useLoader(GLTFLoader, '/scene.gltf');
@@ -40,7 +41,26 @@ function Stars() {
   return group;
 }
 
-export default function EarthBackground({darkMode}) {
+export default function EarthBackground({ darkMode }) {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div
       style={{
