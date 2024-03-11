@@ -107,7 +107,7 @@ export const info = {
       image: mock1,
     },{
       title: 'Procedual Generation of Flying Islands',
-      source: 'https://www.github.com/Nick6464/FlyingIsland',
+      source: 'https://www.github.com/Nick6464/FlyingIslands',
       image: mock4,
     },
     {
