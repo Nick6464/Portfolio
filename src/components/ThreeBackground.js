@@ -42,7 +42,7 @@ function Stars() {
 }
 
 export default function EarthBackground({ darkMode }) {
-  const [windowSize, setWindowSize] = useState({
+  const [, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
