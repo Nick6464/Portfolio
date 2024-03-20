@@ -40,6 +40,12 @@ export const info = {
       icon: 'fa fa-linkedin',
       label: 'linkedin',
     },
+    // Email link to my email
+    {
+      link: 'mailto:nick@waltonit.dev',
+      icon: 'fa fa-solid fa-envelope',
+      label: 'email',
+    },
   ],
   bio: "Hello! I'm Nick. I'm a Fullstack Engineer at Liquid IT. I've been using code to improve my life and the lives of others since I was 11. I'm passionate about using code to solve problems and make life easier. I'm a big fan of React and Node.js, and I'm always looking to learn new things.",
   skills: {
