@@ -3,7 +3,6 @@ import mock1 from '../img/mock1.png';
 import mock2 from '../img/mock2.png';
 import mock3 from '../img/mock3.png';
 import mock4 from '../img/mock4.png';
-import cv from '../img/cv.pdf';
 
 export let colors = ['rgb(0,255,164)', 'rgb(166,104,255)'];
 
@@ -47,15 +46,14 @@ export const info = {
       label: 'email',
     },
   ],
-  bio: "Hello! I'm Nick. I'm a Fullstack Engineer at Liquid IT. I've been using code to improve my life and the lives of others since I was 11. I'm passionate about using code to solve problems and make life easier. I'm a big fan of React and Node.js, and I'm always looking to learn new things.",
+  bio: "Hello! I'm Nick. I'm a Senior Fullstack Engineer. I've been using code to improve my life and the lives of others since I was 11. I'm passionate about using code to solve problems and make life easier. I'm a big fan of React and Node.js, and I'm always looking to learn new things.",
   skills: {
     proficientWith: [
       'javascript',
       'react',
+      'java',
       'git',
       'github',
-      'html5',
-      'css3',
       'sql',
       'postgres',
       'azure',
@@ -64,11 +62,11 @@ export const info = {
     exposedTo: [
       'aws',
       'c#',
-      'java',
       'c++',
       'c',
       'php',
       'docker',
+      'kubernetes',
       'powershell',
       'terraform',
     ],
