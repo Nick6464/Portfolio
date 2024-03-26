@@ -50,7 +50,9 @@ export const info = {
   skills: {
     proficientWith: [
       'javascript',
-      'react',
+      'node.js',
+      'react.js',
+      'graphql',
       'java',
       'git',
       'github',
