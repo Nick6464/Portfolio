@@ -61,6 +61,15 @@ export default function EarthBackground({ darkMode }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const isWebGLSupported =
+    !!window.WebGLRenderingContext &&
+    !!document.createElement('canvas').getContext('webgl');
+
+  if (!isWebGLSupported) {
+    // WebGL is not supported, return null or an alternative component
+    return null;
+  }
+
   return (
     <div
       style={{
